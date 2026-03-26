@@ -25,8 +25,8 @@ export const profile = {
   availability: "Based in Dhaka, Bangladesh and remote anywhere",
   email: "shahadat.jahan@gmail.com",
   phone: "+8801673622719",
-  image: "/shahadat-profile.png",
-  resume: "/Shahadat_Resume_v2.pdf",
+  image: `${import.meta.env.BASE_URL}shahadat-profile.png`,
+  resume: `${import.meta.env.BASE_URL}Shahadat_Resume_v2.pdf`,
   linkedin: "https://www.linkedin.com/in/shahadat-jahan/",
 };
 
