@@ -49,7 +49,7 @@ export const skillGroups = [
   },
   {
     title: "Frontend",
-    items: ["Blade", "JavaScript", "jQuery", "Bootstrap", "CSS"],
+    items: ["JavaScript", "jQuery", "Bootstrap", "CSS"],
   },
 
 ];
