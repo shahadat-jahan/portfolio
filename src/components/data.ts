@@ -102,7 +102,7 @@ export const projects: ProjectItem[] = [
     type: "Academic platform",
     summary:
       "A monolith-style Laravel platform for scheduling, attendance, exams, promotions, fee management, financial reporting, and day-to-day academic operations.",
-    stack: ["Laravel", "Blade", "MySQL", "jQuery", "Bootstrap", "Docker"],
+    stack: ["Laravel", "MySQL", "jQuery", "Bootstrap", "Docker"],
   },
   {
     name: "Flash Card API Platform",
