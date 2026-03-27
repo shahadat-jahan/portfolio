@@ -54,7 +54,10 @@ function DownloadIcon() {
 export default function Hero({ profile, stats }) {
   return (
     <section className="grid gap-6 pt-8 lg:grid-cols-[minmax(0,1.1fr)_320px] lg:items-start">
-      <div className="fade-up space-y-6 rounded-[2rem] border border-slate-200/80 bg-white p-7 shadow-[0_18px_50px_rgba(15,23,42,0.08)] dark:border-white/10 dark:bg-slate-900 dark:shadow-[0_18px_50px_rgba(0,0,0,0.28)] md:p-9">
+      <div
+        data-reveal="left"
+        className="space-y-6 rounded-[2rem] border border-slate-200/80 bg-white p-7 shadow-[0_18px_50px_rgba(15,23,42,0.08)] dark:border-white/10 dark:bg-slate-900 dark:shadow-[0_18px_50px_rgba(0,0,0,0.28)] md:p-9"
+      >
         <div className="flex flex-col gap-6 md:flex-row md:items-start md:justify-between">
           <div className="max-w-2xl">
             <p className="text-xs font-extrabold uppercase tracking-[0.3em] text-cyan-700 dark:text-cyan-300">
@@ -72,7 +75,7 @@ export default function Hero({ profile, stats }) {
           </div>
 
           <div className="order-first flex md:order-last md:justify-end">
-            <div className="relative w-36 shrink-0 rounded-[1.75rem] bg-gradient-to-br from-cyan-200 via-cyan-50 to-slate-100 p-2 dark:from-cyan-400/30 dark:via-slate-900 dark:to-slate-800">
+            <div className="relative w-36 shrink-0 rounded-[1.75rem] bg-gradient-to-br from-cyan-200 via-cyan-50 to-slate-100 p-2 transition duration-500 hover:-translate-y-2 hover:rotate-2 dark:from-cyan-400/30 dark:via-slate-900 dark:to-slate-800">
               <img
                 src={profile.image}
                 alt={`Portrait of ${profile.name}`}
@@ -132,11 +135,12 @@ export default function Hero({ profile, stats }) {
         </div>
       </div>
 
-      <div className="fade-up-delay grid gap-4">
+      <div data-reveal="right" className="grid gap-4" style={{ "--reveal-delay": "140ms" }}>
         {stats.map((item, index) => (
           <article
             key={item.label}
-            className={`rounded-[1.75rem] border border-slate-200/80 bg-white p-6 shadow-[0_14px_40px_rgba(15,23,42,0.06)] transition duration-300 hover:-translate-y-1 dark:border-white/10 dark:bg-slate-900 dark:shadow-[0_14px_40px_rgba(0,0,0,0.24)] ${
+            style={{ "--reveal-delay": `${220 + index * 110}ms` }}
+            className={`interactive-card rounded-[1.75rem] border border-slate-200/80 bg-white p-6 shadow-[0_14px_40px_rgba(15,23,42,0.06)] dark:border-white/10 dark:bg-slate-900 dark:shadow-[0_14px_40px_rgba(0,0,0,0.24)] ${
               index === 0 ? "lg:mt-10" : ""
             }`}
           >

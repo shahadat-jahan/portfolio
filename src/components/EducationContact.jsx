@@ -33,10 +33,22 @@ function DownloadIcon() {
   );
 }
 
+function ArrowIcon() {
+  return (
+    <svg aria-hidden="true" viewBox="0 0 24 24" className="h-4 w-4" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+      <path d="M5 12h14" />
+      <path d="m12 5 7 7-7 7" />
+    </svg>
+  );
+}
+
 export default function EducationContact({ education, profile }) {
   return (
-    <section className="fade-up grid gap-4 lg:grid-cols-2">
-      <article className="rounded-[2rem] border border-slate-200/80 bg-white p-8 shadow-[0_18px_50px_rgba(15,23,42,0.08)] dark:border-white/10 dark:bg-slate-900">
+    <section className="grid gap-4 lg:grid-cols-2">
+      <article
+        data-reveal="left"
+        className="rounded-[2rem] border border-slate-200/80 bg-white p-8 shadow-[0_18px_50px_rgba(15,23,42,0.08)] dark:border-white/10 dark:bg-slate-900"
+      >
         <p className="text-xs font-extrabold uppercase tracking-[0.3em] text-cyan-700 dark:text-cyan-300">
           Education
         </p>
@@ -50,6 +62,8 @@ export default function EducationContact({ education, profile }) {
 
       <article
         id="contact"
+        data-reveal="right"
+        style={{ "--reveal-delay": "120ms" }}
         className="rounded-[2rem] border border-slate-200/80 bg-slate-950 p-8 text-white shadow-[0_18px_50px_rgba(15,23,42,0.12)] dark:border-white/10 dark:bg-cyan-400 dark:text-slate-950"
       >
         <p className="text-xs font-extrabold uppercase tracking-[0.3em] text-cyan-300 dark:text-slate-950/70">
@@ -66,14 +80,14 @@ export default function EducationContact({ education, profile }) {
         <div className="mt-6 grid gap-3">
           <a
             href={`mailto:${profile.email}`}
-            className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-4 py-3 text-sm font-medium text-white dark:border-slate-950/10 dark:bg-slate-950/10 dark:text-slate-950"
+            className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-4 py-3 text-sm font-medium text-white transition duration-300 hover:-translate-y-1 hover:bg-white/10 dark:border-slate-950/10 dark:bg-slate-950/10 dark:text-slate-950 dark:hover:bg-slate-950/20"
           >
             <MailIcon />
             {profile.email}
           </a>
           <a
             href={`tel:${profile.phone}`}
-            className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-4 py-3 text-sm font-medium text-white dark:border-slate-950/10 dark:bg-slate-950/10 dark:text-slate-950"
+            className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-4 py-3 text-sm font-medium text-white transition duration-300 hover:-translate-y-1 hover:bg-white/10 dark:border-slate-950/10 dark:bg-slate-950/10 dark:text-slate-950 dark:hover:bg-slate-950/20"
           >
             <PhoneIcon />
             {profile.phone}
@@ -82,7 +96,7 @@ export default function EducationContact({ education, profile }) {
             href={profile.linkedin}
             target="_blank"
             rel="noreferrer"
-            className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-4 py-3 text-sm font-medium text-white dark:border-slate-950/10 dark:bg-slate-950/10 dark:text-slate-950"
+            className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-4 py-3 text-sm font-medium text-white transition duration-300 hover:-translate-y-1 hover:bg-white/10 dark:border-slate-950/10 dark:bg-slate-950/10 dark:text-slate-950 dark:hover:bg-slate-950/20"
           >
             <LinkedInIcon />
             LinkedIn Profile
@@ -91,10 +105,17 @@ export default function EducationContact({ education, profile }) {
             href={profile.resume}
             target="_blank"
             rel="noreferrer"
-            className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-4 py-3 text-sm font-medium text-white dark:border-slate-950/10 dark:bg-slate-950/10 dark:text-slate-950"
+            className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-4 py-3 text-sm font-medium text-white transition duration-300 hover:-translate-y-1 hover:bg-white/10 dark:border-slate-950/10 dark:bg-slate-950/10 dark:text-slate-950 dark:hover:bg-slate-950/20"
           >
             <DownloadIcon />
             Download Resume
+          </a>
+          <a
+            href={`mailto:${profile.email}`}
+            className="mt-2 inline-flex items-center justify-center gap-2 rounded-full bg-white px-5 py-3 text-sm font-semibold text-slate-950 transition duration-300 hover:-translate-y-1 hover:bg-cyan-200 dark:bg-slate-950 dark:text-white dark:hover:bg-slate-900"
+          >
+            Let's Work Together
+            <ArrowIcon />
           </a>
           <span className="px-1 pt-2 text-sm text-slate-200 dark:text-slate-950/80">
             {profile.availability}
