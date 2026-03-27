@@ -1,15 +1,9 @@
-import type { ExperienceItem } from "./data";
-
-type ExperienceProps = {
-  items: ExperienceItem[];
-};
-
-function formatPeriod(start: string, end: string) {
+function formatPeriod(start, end) {
   const format = new Intl.DateTimeFormat("en-US", { month: "short", year: "numeric" });
   return `${format.format(new Date(start))} - ${format.format(new Date(end))}`;
 }
 
-export default function Experience({ items }: ExperienceProps) {
+export default function Experience({ items }) {
   return (
     <section id="experience" className="fade-up rounded-[2rem] border border-slate-200/80 bg-white p-8 shadow-[0_18px_50px_rgba(15,23,42,0.08)] dark:border-white/10 dark:bg-slate-900">
       <p className="text-xs font-extrabold uppercase tracking-[0.3em] text-cyan-700 dark:text-cyan-300">

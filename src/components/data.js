@@ -1,23 +1,3 @@
-export type Stat = {
-  value: string;
-  label: string;
-};
-
-export type ExperienceItem = {
-  role: string;
-  company: string;
-  start: string;
-  end: string;
-  points: string[];
-};
-
-export type ProjectItem = {
-  name: string;
-  type: string;
-  summary: string;
-  stack: string[];
-};
-
 export const profile = {
   name: "MD. Shahadat Uddin",
   title: "Software Engineer (Backend-focused)",
@@ -41,7 +21,15 @@ export const skillGroups = [
   },
   {
     title: "Architecture & Practices",
-    items: ["MVC Architecture", "SOLID Principles", "DRY Principles", "Clean Code", "API-First Development", "Token-based Authentication (Sanctum/JWT)", "RBAC"],
+    items: [
+      "MVC Architecture",
+      "SOLID Principles",
+      "DRY Principles",
+      "Clean Code",
+      "API-First Development",
+      "Token-based Authentication (Sanctum/JWT)",
+      "RBAC",
+    ],
   },
   {
     title: "DevOps",
@@ -51,7 +39,6 @@ export const skillGroups = [
     title: "Frontend",
     items: ["JavaScript", "jQuery", "Bootstrap", "CSS"],
   },
-
 ];
 
 export const strengths = [
@@ -69,7 +56,7 @@ export const strengths = [
   },
 ];
 
-export const experiences: ExperienceItem[] = [
+export const experiences = [
   {
     role: "Software Engineer",
     company: "Vivasoft Limited",
@@ -96,7 +83,7 @@ export const experiences: ExperienceItem[] = [
   },
 ];
 
-export const projects: ProjectItem[] = [
+export const projects = [
   {
     name: "Student Management System",
     type: "Academic platform",
@@ -133,7 +120,7 @@ export const education = {
   period: "Sep 2014 - Dec 2017",
 };
 
-export function getExperienceYears(items: ExperienceItem[]): string {
+export function getExperienceYears(items) {
   const earliest = items.reduce((min, item) => (item.start < min ? item.start : min), items[0].start);
   const startDate = new Date(earliest);
   const now = new Date();
@@ -149,12 +136,12 @@ export function getExperienceYears(items: ExperienceItem[]): string {
   return `${years.toFixed(1)}+ years`;
 }
 
-export function getDeliveredSystemsCount(items: ProjectItem[]): string {
+export function getDeliveredSystemsCount(items) {
   return `${items.length}+`;
 }
 
-export const stats: Stat[] = [
+export const stats = [
   { value: getExperienceYears(experiences), label: "Hands-on engineering experience" },
   { value: getDeliveredSystemsCount(projects), label: "Core business systems delivered" },
-    { value: "API first + Monolith", label: "Primary implementation style" },
+  { value: "API first + Monolith", label: "Primary implementation style" },
 ];

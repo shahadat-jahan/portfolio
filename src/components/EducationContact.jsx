@@ -1,19 +1,3 @@
-type EducationContactProps = {
-  education: {
-    degree: string;
-    school: string;
-    period: string;
-  };
-  profile: {
-    email: string;
-    phone: string;
-    location: string;
-    availability: string;
-    linkedin: string;
-    resume: string;
-  };
-};
-
 function MailIcon() {
   return (
     <svg aria-hidden="true" viewBox="0 0 24 24" className="h-4 w-4" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
@@ -49,7 +33,7 @@ function DownloadIcon() {
   );
 }
 
-export default function EducationContact({ education, profile }: EducationContactProps) {
+export default function EducationContact({ education, profile }) {
   return (
     <section className="fade-up grid gap-4 lg:grid-cols-2">
       <article className="rounded-[2rem] border border-slate-200/80 bg-white p-8 shadow-[0_18px_50px_rgba(15,23,42,0.08)] dark:border-white/10 dark:bg-slate-900">

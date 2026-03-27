@@ -1,10 +1,4 @@
-import type { ProjectItem } from "./data";
-
-type ProjectsProps = {
-  items: ProjectItem[];
-};
-
-export default function Projects({ items }: ProjectsProps) {
+export default function Projects({ items }) {
   return (
     <section id="projects" className="fade-up rounded-[2rem] border border-slate-200/80 bg-white p-8 shadow-[0_18px_50px_rgba(15,23,42,0.08)] dark:border-white/10 dark:bg-slate-900">
       <p className="text-xs font-extrabold uppercase tracking-[0.3em] text-cyan-700 dark:text-cyan-300">

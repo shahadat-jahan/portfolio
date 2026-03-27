@@ -1,13 +1,4 @@
-type SkillGroup = {
-  title: string;
-  items: string[];
-};
-
-type SkillsProps = {
-  groups: SkillGroup[];
-};
-
-export default function Skills({ groups }: SkillsProps) {
+export default function Skills({ groups }) {
   return (
     <section className="fade-up rounded-[2rem] border border-slate-200/80 bg-white p-8 shadow-[0_18px_50px_rgba(15,23,42,0.08)] dark:border-white/10 dark:bg-slate-900">
       <div className="max-w-2xl">

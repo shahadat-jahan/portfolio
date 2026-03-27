@@ -1,5 +1,3 @@
-import type { Stat } from "./data";
-
 function PinIcon() {
   return (
     <svg aria-hidden="true" viewBox="0 0 24 24" className="h-4 w-4" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
@@ -53,21 +51,7 @@ function DownloadIcon() {
   );
 }
 
-type HeroProps = {
-  profile: {
-    name: string;
-    title: string;
-    image: string;
-    location: string;
-    email: string;
-    phone: string;
-    resume: string;
-    linkedin: string;
-  };
-  stats: Stat[];
-};
-
-export default function Hero({ profile, stats }: HeroProps) {
+export default function Hero({ profile, stats }) {
   return (
     <section className="grid gap-6 pt-8 lg:grid-cols-[minmax(0,1.1fr)_320px] lg:items-start">
       <div className="fade-up space-y-6 rounded-[2rem] border border-slate-200/80 bg-white p-7 shadow-[0_18px_50px_rgba(15,23,42,0.08)] dark:border-white/10 dark:bg-slate-900 dark:shadow-[0_18px_50px_rgba(0,0,0,0.28)] md:p-9">

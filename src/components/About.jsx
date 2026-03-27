@@ -1,13 +1,4 @@
-type Strength = {
-  title: string;
-  text: string;
-};
-
-type AboutProps = {
-  strengths: Strength[];
-};
-
-export default function About({ strengths }: AboutProps) {
+export default function About({ strengths }) {
   return (
     <section id="about" className="fade-up grid gap-6 lg:grid-cols-[minmax(0,0.9fr)_minmax(0,1.1fr)]">
       <div className="rounded-[1.75rem] border border-slate-200/80 bg-slate-950 p-8 text-white shadow-[0_18px_50px_rgba(15,23,42,0.12)] dark:border-white/10 dark:bg-cyan-400 dark:text-slate-950">

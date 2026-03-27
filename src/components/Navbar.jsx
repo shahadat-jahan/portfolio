@@ -1,10 +1,4 @@
-type NavbarProps = {
-  theme: "light" | "dark";
-  onToggleTheme: () => void;
-  resume: string;
-};
-
-export default function Navbar({ theme, onToggleTheme, resume }: NavbarProps) {
+export default function Navbar({ theme, onToggleTheme, resume }) {
   return (
     <nav className="flex flex-col gap-4 border-b border-slate-200/70 pb-6 dark:border-white/10 lg:flex-row lg:items-center lg:justify-between">
       <div className="flex items-center gap-4">

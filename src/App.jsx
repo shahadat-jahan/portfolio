@@ -6,9 +6,17 @@ import Hero from "./components/Hero";
 import Navbar from "./components/Navbar";
 import Projects from "./components/Projects";
 import Skills from "./components/Skills";
-import { education, experiences, profile, projects, skillGroups, stats, strengths } from "./components/data";
+import {
+  education,
+  experiences,
+  profile,
+  projects,
+  skillGroups,
+  stats,
+  strengths,
+} from "./components/data";
 
-function getInitialTheme(): "light" | "dark" {
+function getInitialTheme() {
   const saved = window.localStorage.getItem("theme");
   if (saved === "light" || saved === "dark") {
     return saved;
@@ -18,7 +26,7 @@ function getInitialTheme(): "light" | "dark" {
 }
 
 export default function App() {
-  const [theme, setTheme] = useState<"light" | "dark">(getInitialTheme);
+  const [theme, setTheme] = useState(getInitialTheme);
 
   useEffect(() => {
     document.documentElement.classList.toggle("dark", theme === "dark");
@@ -46,7 +54,6 @@ export default function App() {
           <Projects items={projects} />
           <EducationContact education={education} profile={profile} />
         </main>
-
       </div>
     </div>
   );
