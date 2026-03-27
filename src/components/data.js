@@ -61,7 +61,7 @@ export const experiences = [
     role: "Software Engineer",
     company: "Vivasoft Limited",
     start: "2022-10-01",
-    end: "2026-03-01",
+    end: "2026-03-31",
     points: [
       "Architected and maintained a CRM platform covering lead tracking, prospect management, and sales operations.",
       "Designed and developed a Student Management System for academic, examination, and financial workflows.",
@@ -74,7 +74,7 @@ export const experiences = [
     role: "Junior Software Engineer",
     company: "Swapnoloke",
     start: "2022-04-01",
-    end: "2022-09-01",
+    end: "2022-09-30",
     points: [
       "Developed Laravel backend modules for a Library Management System.",
       "Implemented ERP features for purchase, sales, and tender workflows.",
